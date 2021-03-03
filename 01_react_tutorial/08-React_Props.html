@@ -26,16 +26,17 @@ React 'Props' are like function arguments in JavaScript and attributes in HTML.
 To send 'props' into a component, use the same syntax as HTML attributes:
 
 
-Example: Add a "brand" attribute to the Car element:
--------
-     ________________________________________
-    const myelement = <Car brand="Ford" />;
+Example: Add a "brand" attribute to the Car element:  -->
+   
+   <script>
+       const myelement = <Car brand="Ford" />;
+   </script>
  
-The component receives the argument as a props object:
+<!-- The component receives the argument as a props object:
 
 
-Example: Use the brand attribute in the component:                                 -->
---------
+Example: Use the brand attribute in the component:      -->
+
       <script>
           import React from 'react';
           import ReactDOM from 'react-dom';
@@ -43,7 +44,7 @@ Example: Use the brand attribute in the component:                              
           class Car extends React.Component {
 
               render() {
-                  return <h2> I am a {this.props.brand} ! </h2>;
+                  return <h2> I am a {this.props.brand} car ! </h2>;
               }
           }
 
@@ -51,7 +52,6 @@ Example: Use the brand attribute in the component:                              
 
           ReactDOM.render( myElement1,  document.getElementById('palce1'));
 
-          // --> I am a Ford
       </script>
 
 
@@ -66,7 +66,6 @@ Example : Send the "brand" property from the Garage component
 
       <script>
           class Car2 extends React.Component {
-
               render() {
                   return (
                       <div>
@@ -93,7 +92,7 @@ Example : Send the "brand" property from the Garage component
 
 
 <!-- If you have a variable to send, that is not a string as in the example above, 
-you just put the variable name inside curly brackets:
+you just put the variable name inside curly brackets. See below
 
 Example: Create a variable named "carname" and send it to the Car component: -->
 
@@ -124,9 +123,11 @@ Example: Create a variable named "carname" and send it to the Car component: -->
      
      // ---------------------------------------------------------------------
 
-// Example: Create a variable named "livingPlace", an Array and send it to the Car component:
-          class Car4 extends React.Component {
 
+// Example: Create a variable named "livingPlace", an Array and send it to 
+// the Car component:
+
+          class Car4 extends React.Component {
               render() {
                   return (
                       <div>
